@@ -19,6 +19,11 @@
             age: '23'
             }
         ];
+
+        $scope.customer = {
+            name: "Bachchan",
+            type: "Premium"
+        }
     }
 
     MyController.$inject = [ '$scope'];
