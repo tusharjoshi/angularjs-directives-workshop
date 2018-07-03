@@ -6,25 +6,21 @@
     
     angular.module('myApp').controller('MyController', MyController);
 
-    function MyController($scope) {
-        $scope.names = [
-            {
-            name: 'Sachin',
-            age: '29'
-            }, {
-            name: 'Dhoni',
-            age: '45'
-            }, {
-            name: 'Virat',
-            age: '23'
-            }
-        ];
+    MyController.$inject = [ '$scope'];
 
+    function MyController($scope) {
         $scope.customer = {
-            name: "Bachchan",
-            type: "Premium"
+            name: "Amitabh Bachchan",
+            type: "Premium",
+            wishlist: [
+                "Surfing",
+                "Trekking",
+                "Driving"
+            ]
+        }
+
+        $scope.upgrade = function(customer) {
+            customer.status = "Upgraded";
         }
     }
-
-    MyController.$inject = [ '$scope'];
 })();

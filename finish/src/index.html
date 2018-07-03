@@ -2,17 +2,11 @@
 <html lang="en" ng-app="myApp">
   <head>
     <title>AngularJS Directives Workshop</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
     <script src="main.js"></script>
   </head>
-  <body ng-controller="MyController">
+  <body ng-controller="MyController" class="container">
     <h2>AngularJS Directives Workshop</h2>
-    <ul>
-      <li ng-repeat="item in names">
-          <p><div>Name: <span>{{item.name}}</span></div>
-            <div>Age: <span>{{item.age}}</span></div></p>
-      </li>
-    </ul>
-    <magician></magician>
     <user-info></user-info>
   </body>
 </html>
