@@ -17,10 +17,6 @@
                 "Trekking",
                 "Driving"
             ]
-        }
-
-        $scope.upgrade = function(customer) {
-            customer.status = "Upgraded";
-        }
+        }        
     }
 })();
