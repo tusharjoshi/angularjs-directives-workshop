@@ -6,5 +6,5 @@
 
     angular.module('myApp', []);
     require('./app');
-    
+    require('./components/magician/magician.component');
 })();
