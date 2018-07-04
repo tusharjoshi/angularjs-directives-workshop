@@ -1,0 +1,19 @@
+<div class="panel panel-primary">
+    <div class="panel-heading" ng-click="collapse()">{{customer.name}}</div>
+    <div class="panel-body" ng-hide="collapsed">
+        <h4>Type:</h4>
+        <div>{{customer.type}}</div>
+        <h4>Wishlist:<h4></h4>
+        <ul>
+            <li ng-repeat="wish in customer.wishlist">
+                {{wish}}
+                <delete-action on-delete="deleteWish(wish)"></delete-action>                
+            </li>
+        </ul>
+        <div ng-show="!!customer.status">
+            Status: {{customer.status}}
+        </div>
+        <button ng-show="!customer.status" class="btn btn-success" ng-click="upgrade(customer)">Upgrade</button>
+        <button ng-click="nextState()">Next State</button>
+    </div>
+</div>
