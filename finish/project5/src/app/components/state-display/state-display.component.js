@@ -14,20 +14,10 @@
     }
 
     function StateDisplayDirectiveLink(scope, el, attrs) {
-        scope.$watch(attrs['stateDisplay'], function(newVal) {
-            var stateColor;
-            switch(newVal) {
-                case 0:
-                    stateColor = 'white';
-                    break;
-                case 1:
-                    stateColor = 'yellow';
-                    break;
-                case 2:
-                    stateColor = 'red';
-                    break;
-            }
-            el.css('background-color', stateColor);
+        var parameters = attrs['stateDisplay'].split(' ');
+        var linkVar = parameters[0];
+        scope.$watch(linkVar, function(newVal) {
+            el.css('background-color', parameters[newVal + 1]);
         });  
     }
 

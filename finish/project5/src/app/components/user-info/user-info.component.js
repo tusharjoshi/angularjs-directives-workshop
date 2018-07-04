@@ -35,7 +35,7 @@
         }   
         $scope.nextState = function() {
             $scope.customer.level++;
-            $scope.customer.level = $scope.customer.level % 3;
+            $scope.customer.level = $scope.customer.level % 4;
         };   
     }
     
