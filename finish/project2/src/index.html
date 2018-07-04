@@ -7,7 +7,8 @@
   </head>
   <body ng-controller="MyController" class="container">
     <h2>AngularJS Directives Workshop</h2>
-    <video id="vid" spacebar-support controls preload="none" poster="http://media.w3.org/2010/05/sintel/poster.png">
+    <video id="vid" spacebar-support event-pause="handlePause()" 
+      controls preload="none" poster="http://media.w3.org/2010/05/sintel/poster.png">
       <source src="http://media.w3.org/2010/05/sintel/trailer.ogv" type="video/ogg" />
       <source src="http://media.w3.org/2010/05/sintel/trailer.mp4" type="video/mp4" />
       <source src="http://media.w3.org/2010/05/sintel/trailer.webm5" type="video/webm" />

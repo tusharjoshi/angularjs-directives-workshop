@@ -2,12 +2,12 @@
 
     'use strict';
 
-    require('jquery');
+    var $ = require('jquery');
     require('angular');
     
     angular.module("myApp").directive("spacebarSupport", SpacebarSupportDirective);
 
-    function DeleteActionDirective() {
+    function SpacebarSupportDirective() {
         return SpacebarSupportDirectiveLink;
     }
 

@@ -6,20 +6,11 @@
     
     angular.module('myApp').controller('MyController', MyController);
 
-    function MyController($scope) {
-        $scope.names = [
-            {
-            name: 'Sachin',
-            age: '29'
-            }, {
-            name: 'Dhoni',
-            age: '45'
-            }, {
-            name: 'Virat',
-            age: '23'
-            }
-        ];
-    }
-
     MyController.$inject = [ '$scope'];
+
+    function MyController($scope) {
+        $scope.handlePause = function() {
+            console.log('video was paused');
+        }
+    }
 })();

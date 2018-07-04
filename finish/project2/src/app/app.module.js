@@ -9,4 +9,5 @@
     require('./app');
     
     require('./components/spacebar-support/spacebar-support.component');
+    require('./components/event-pause/event-pause.component');
 })();
