@@ -1,0 +1,15 @@
+<person-panel name="{{person.name}}" level="person.level" collapsed="{{initialCollapsed}}">
+    <h4>Type:</h4>
+    <div>{{person.type}}</div>
+    <h4>Wishlist:<h4></h4>
+    <ul>
+        <li ng-repeat="wish in person.wishlist">
+            {{wish}}
+            <delete-action on-delete="deleteWish(wish)"></delete-action>                
+        </li>
+    </ul>
+    <div ng-show="!!person.status">
+        Status: {{person.status}}
+    </div>
+    <button ng-show="!person.status" class="btn btn-success" ng-click="upgrade(person)">Upgrade</button>
+</person-panel>
