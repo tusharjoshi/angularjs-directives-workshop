@@ -1,6 +1,6 @@
 <div class="panel panel-primary">
     <div class="panel-heading" ng-click="collapse()">{{customer.name}}</div>
-    <div class="panel-body" ng-hide="collapsed">
+    <div class="panel-body" state-display="customer.level" ng-hide="collapsed">
         <h4>Type:</h4>
         <div>{{customer.type}}</div>
         <h4>Wishlist:<h4></h4>
@@ -14,6 +14,6 @@
             Status: {{customer.status}}
         </div>
         <button ng-show="!customer.status" class="btn btn-success" ng-click="upgrade(customer)">Upgrade</button>
-        <button ng-click="nextState()">Next State</button>
+        <button ng-click="nextState()" class="btn btn-info">Next State</button>
     </div>
 </div>

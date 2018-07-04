@@ -9,4 +9,5 @@
     require('./components/magician/magician.component');
     require('./components/delete-action/delete-action.component');
     require('./components/user-info/user-info.component');
+    require('./components/state-display/state-display.component');
 })();

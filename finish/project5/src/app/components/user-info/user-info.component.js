@@ -15,7 +15,6 @@
                 customer: "=",
                 initialCollapsed: "@collapsed"
             },
-            link: UserInfoDirectiveLink,
             controller: ['$scope', UserInfoDirectiveController]
         };
     }
@@ -33,32 +32,11 @@
             if( index > -1) {
                 $scope.customer.wishlist.splice(index,1);
             }
-        }     
+        }   
+        $scope.nextState = function() {
+            $scope.customer.level++;
+            $scope.customer.level = $scope.customer.level % 3;
+        };   
     }
-
-    function UserInfoDirectiveLink(scope, el, attrs) {
-        scope.nextState = function() {
-            scope.customer.level++;
-            scope.customer.level = scope.customer.level % 3;
-            setState();
-        };            
-
-        function setState() {
-            var stateColor;
-            switch(scope.customer.level) {
-                case 0:
-                    stateColor = 'white';
-                    break;
-                case 1:
-                    stateColor = 'yellow';
-                    break;
-                case 2:
-                    stateColor = 'red';
-                    break;
-            }
-            $(el).find('.panel-body').css('background-color', stateColor);
-        }
-
-        setState();
-    }
+    
 })();
