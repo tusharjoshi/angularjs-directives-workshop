@@ -10,6 +10,9 @@
         return {
             restrict: "E",
             templateUrl: "/app/components/delete-wish/delete-wish.component.html",
+            scope: {
+                notifyParent: "&method"
+            },
             controller: ['$scope', DeleteWishDirectiveController]
         };
     }
@@ -22,11 +25,8 @@
         $scope.cancelDelete = function() {
             $scope.deleting = false;
         }
-        $scope.deleteWish = function(wish) {
-            var index = $scope.customer.wishlist.indexOf(wish);
-            if( index > -1) {
-                $scope.customer.wishlist.splice(index,1);
-            }
-        }
+        $scope.confirmDelete = function() {
+            $scope.notifyParent();
+        }        
     }
 })();

@@ -25,6 +25,12 @@
         }
         $scope.collapse = function() {
             $scope.collapsed = !$scope.collapsed;
-        }        
+        }   
+        $scope.deleteWish = function(wish) {
+            var index = $scope.customer.wishlist.indexOf(wish);
+            if( index > -1) {
+                $scope.customer.wishlist.splice(index,1);
+            }
+        }     
     }
 })();
