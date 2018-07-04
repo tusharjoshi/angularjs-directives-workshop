@@ -2,15 +2,15 @@
 <html lang="en" ng-app="myApp">
   <head>
     <title>AngularJS Directives Workshop</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
     <script src="main.js"></script>
   </head>
-  <body ng-controller="MyController">
+  <body ng-controller="MyController" class="container">
     <h2>AngularJS Directives Workshop</h2>
-    <ul>
-      <li ng-repeat="item in names">
-          <p><div>Name: <span>{{item.name}}</span></div>
-            <div>Age: <span>{{item.age}}</span></div></p>
-      </li>
-    </ul>
+    <video id="vid" spacebar-support controls preload="none" poster="http://media.w3.org/2010/05/sintel/poster.png">
+      <source src="http://media.w3.org/2010/05/sintel/trailer.ogv" type="video/ogg" />
+      <source src="http://media.w3.org/2010/05/sintel/trailer.mp4" type="video/mp4" />
+      <source src="http://media.w3.org/2010/05/sintel/trailer.webm5" type="video/webm" />
+    </video>
   </body>
 </html>
