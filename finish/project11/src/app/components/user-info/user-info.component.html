@@ -1,0 +1,19 @@
+<div class="panel panel-primary">
+    <div class="panel-heading" ng-click="vm.collapse()">{{vm.customer.name}}</div>
+    <div class="panel-body" state-display="vm.customer.level white yellow orange red" ng-hide="vm.collapsed">
+        <h4>Type:</h4>
+        <div>{{vm.customer.type}}</div>
+        <h4>Wishlist:<h4></h4>
+        <ul>
+            <li ng-repeat="wish in vm.customer.wishlist">
+                {{wish}}
+                <delete-action on-delete="vm.deleteWish(wish)"></delete-action>                
+            </li>
+        </ul>
+        <div ng-show="!!vm.customer.status">
+            Status: {{vm.customer.status}}
+        </div>
+        <button ng-show="!vm.customer.status" class="btn btn-success" ng-click="vm.upgrade(vm.customer)">Upgrade</button>
+        <button ng-click="vm.nextState()" class="btn btn-info">Next State</button>
+    </div>
+</div>
