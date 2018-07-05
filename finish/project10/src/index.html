@@ -7,8 +7,8 @@
   </head>
   <body ng-controller="MyController" class="container">
     <h2>AngularJS Directives Workshop</h2>
-    <div my-repeat="actor in actors">
-      <span>Name: {{actor.name}}</span>
+    <div actor-list="actor in actors">
+      <span>Name: {{actor.age}}</span>
     </div>
     <button class="btn btn-primary" ng-click="add()">Add</button>
     <button class="btn btn-primary" ng-click="remove()">Remove</button>
