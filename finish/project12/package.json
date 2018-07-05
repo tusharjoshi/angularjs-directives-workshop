@@ -1,0 +1,37 @@
+{
+  "name": "angularjs-directives-workshop",
+  "version": "1.0.0",
+  "description": "Angular 1.6 Directives Workshop",
+  "private": true,
+  "scripts": {
+    "build": "webpack --config webpack.config.js --mode=production",
+    "start": "webpack-dev-server --config webpack.config.js --mode=development"
+  },
+  "keywords": [],
+  "author": "Tushar Joshi",
+  "license": "MIT",
+  "devDependencies": {
+    "webpack": "^4.14.0",
+    "webpack-cli": "^3.0.8",
+    "webpack-dev-server": "^3.1.4"
+  },
+  "dependencies": {
+    "@uirouter/angularjs": "1.0.15",
+    "angular": "1.6.9",
+    "angular-animate": "1.6.9",
+    "angular-bind-html-compile": "1.4.1",
+    "angular-cookies": "1.6.9",
+    "angular-dynamic-locale": "0.1.32",
+    "angular-i18n": "1.6.9",
+    "angular-mocks": "1.6.9",
+    "angular-resource": "1.6.9",
+    "angular-sanitize": "1.6.9",
+    "angular-translate": "2.17.0",
+    "angular-translate-loader-static-files": "2.17.0",
+    "angular-translate-once": "1.0.3",
+    "fontawesome": "4.7.2",
+    "jquery": "3.3.1",
+    "lex": "1.7.9",
+    "underscore": "1.9.0"
+  }
+}
